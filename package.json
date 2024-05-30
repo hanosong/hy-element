@@ -7,7 +7,7 @@
     "dev": "pnpm --filter @hy-element/play dev --open",
     "docs:dev": "pnpm --filter @hy-element/docs dev --open",
     "docs:build": "pnpm --filter @hy-element/docs build",
-    "test": "echo 'todo'"
+    "test": "pnpm --filter @hy-element/components test"
   },
   "keywords": [],
   "author": "",
