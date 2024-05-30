@@ -54,3 +54,10 @@ pnpm add -D vitepress@1.0.0-rc.44 --filter @hy-element/docs
 ~~~
 
 * 注意package.json中的入口文件是不是index.ts
+
+
+doc中使用vitpress
+npx vitepress init
+npm run docs:dev
+
+![image-20240530121830640](https://gitee.com/hanosong/picgo_drawingbed/raw/master/image-20240530121830640.png)

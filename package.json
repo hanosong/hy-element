@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm --filter @hy-element/play dev"
+    "dev": "pnpm --filter @hy-element/play dev",
+    "docs:dev": "pnpm --filter @hy-element/docs dev --open",
+    "docs:build": "pnpm --filter @hy-element/docs build",
+    "test": "echo 'todo'"
   },
   "keywords": [],
   "author": "",
