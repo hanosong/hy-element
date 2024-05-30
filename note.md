@@ -22,7 +22,7 @@ done
 packages中的层级说明
 ~~~md
 - components # 组件目录
-- core # npm 包入口
+- core # npm 包入口 -- components的唯一出口
 - docs # 文档目录
 - hooks # 组合式API hooks 目录
 - play # 组件开发实验室 用于写简单组件看效果
@@ -38,3 +38,19 @@ pnpm add -Dw typescript@^5.2.2 vite@^5.1.4 vitest@^1.4.0 vue-tsc@^1.8.27 postcss
 
 pnpm add -w lodash-es@^4.17.21 vue@^3.4.19
 ~~~
+
+components中的依赖安装
+> --filter 参数用于指定工作空间中的一个特定包，即 @hy-element/components。
+这意味着这些依赖项将仅被添加到 @hy-element/components 包的依赖中，而不是整个工作空间的所有包。\
+直接在根目录下安装即可
+~~~sh
+pnpm add -D @vue/test-utils@^2.4.5 @vitest/coverage-v8@^1.4.0 jsdom@^24.0.0 --filter @hy-element/components
+pnpm add @popperjs/core@^2.11.8 async-validator@^4.2.5 --filter @hy-element/components
+~~~
+
+docs中的依赖
+~~~sh
+pnpm add -D vitepress@1.0.0-rc.44 --filter @hy-element/docs
+~~~
+
+* 注意package.json中的入口文件是不是index.ts

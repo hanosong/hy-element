@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm --filter @hy-element/play dev"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,10 @@
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "hy-element": "workspace:*",
+    "@hy-element/hooks": "workspace:*",
+    "@hy-element/utils": "workspace:*",
+    "@hy-element/theme": "workspace:*"
   }
 }
