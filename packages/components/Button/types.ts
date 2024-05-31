@@ -1,4 +1,4 @@
-import type { Component } from "vue";
+import type { Component, Ref } from "vue";
 
 // 定义按钮类型
 export type ButtonType = "primary"| "success"| "warning"|"danger"| "info";
@@ -16,4 +16,18 @@ export interface ButtonProps {
     loading?: boolean;
     disabled?: boolean;
     icon?: string;
+    loadingIcon?: string;
+    autofocus?: boolean;
+    useThrottle?: boolean;
+    throttleDuration?: number;
+}
+
+// 定义节流
+export interface ButtonEmits {
+    (e: 'click', val: MouseEvent): void;
+}
+
+// button暴露的实例
+export interface ButtonInstance {
+    ref: Ref<HTMLButtonElement | void> ; // 暴露节点
 }
